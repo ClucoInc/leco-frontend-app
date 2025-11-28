@@ -1,0 +1,97 @@
+/* Dashboard-specific styles extracted from App.css
+   Keeps dashboard layout, table, badges and controls scoped */
+
+.dashboard-page {
+  padding: 28px 40px;
+}
+
+.dashboard-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:18px;
+}
+
+.dashboard-header h1 {
+  margin:0;
+  font-size:34px;
+  font-weight:700;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+
+.dashboard-sub {
+  margin:8px 0 0;
+  color: var(--muted);
+  font-size:15px;
+}
+
+.dashboard-controls {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:18px 0;
+}
+
+.search-wrap { flex: 1 1 auto; }
+.search-input {
+  padding:14px 16px;
+  border-radius:12px;
+  border:1px solid #e6eef6;
+  width:100%;
+  max-width: 720px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+  font-size:15px;
+  color: var(--text);
+}
+
+.status-select {
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid #e6eef6;
+  background:#fff;
+}
+
+.cta-button, .auth-button.primary {
+  background:#0b2740;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:8px;
+  font-weight:600;
+  border:none;
+}
+
+.cases-card {
+  background:var(--card);
+  border-radius:var(--radius-lg);
+  padding:32px 28px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.04);
+}
+
+.cases-card h3 { margin-top:0; font-size:20px; font-weight:700; }
+
+.cases-table { width:100%; border-collapse:collapse; margin-top:20px }
+.cases-table thead th { text-align:left; font-size:13px; color:var(--muted); font-weight:600; padding:18px 12px; border-bottom:1px solid #eef6fb }
+.cases-table tbody td { padding:18px 12px; text-align:left; border-bottom:1px solid #f1f5f9; vertical-align:middle; font-size:15px; color:#334155 }
+.cases-table tbody tr:last-child td { border-bottom: none }
+.cases-table td.requisition-id { font-weight:700; color:var(--text); }
+
+/* Status badges */
+.status-badge { display:inline-block; padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600 }
+.status-badge.in-progress { background:#eef6ff; color:#1e40af }
+.status-badge.draft-ready { background:#f0fdf4; color:#166534 }
+.status-badge.awaiting-client { background:#fff7ed; color:#b45309 }
+
+.link-button { background:none; border:none; color:#0b2740; cursor:pointer; font-weight:600 }
+
+/* Adjust column widths for better alignment */
+.cases-table colgroup col:first-child { width: 12%; }
+.cases-table colgroup col:nth-child(2) { width: 28%; }
+.cases-table colgroup col:nth-child(3) { width: 18%; }
+.cases-table colgroup col:nth-child(4) { width: 14%; }
+.cases-table colgroup col:nth-child(5) { width: 8%; }
+.cases-table colgroup col:nth-child(6) { width: 10%; }
+.cases-table colgroup col:nth-child(7) { width: 8%; }
+.cases-table colgroup col:nth-child(8) { width: 6%; }
+
+.case-action { color:#0b2740; font-weight:600; cursor:pointer }

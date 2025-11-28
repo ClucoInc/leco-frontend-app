@@ -1,0 +1,295 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Import Inter from Google Fonts for consistent typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --container-width: 1280px;
+  --base-font-size: 15px;
+}
+
+html { font-size: var(--base-font-size); }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', 'Segoe UI', Arial, sans-serif; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+/* Global headings and spacing refinements */
+h1, h2, h3 { color: var(--text); margin: 0 0 8px 0; }
+h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.2px; }
+h2 { font-size: 20px; font-weight: 700; }
+h3 { font-size: 16px; font-weight: 600; }
+
+/* Container default padding for pages */
+.page-container { max-width: var(--container-width); margin: 0 auto; padding: 28px 40px; }
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+/* Global typography to match screenshot */
+body, #root, .requisition-container, .auth-card, .cases-card {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #0f172a;
+}
+
+/* Page background subtle */
+body {
+  background: #f8fafc;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+  /* Requisition Screen Styles */
+  .requisition-container {
+    max-width: 600px;
+    margin: 32px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px 24px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .requisition-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .requisition-subtitle {
+    color: #4b5563;
+    margin-bottom: 24px;
+  }
+  .requisition-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .requisition-label {
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .requisition-input {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+  .requisition-helper {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  .requisition-divider {
+    margin: 18px 0;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+  }
+  .requisition-id-box {
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .requisition-id-label {
+    color: #6b7280;
+    font-size: 1rem;
+  }
+  .requisition-id-value {
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    font-size: 1.1rem;
+    color: #374151;
+    margin-top: 4px;
+    display: block;
+  }
+  .requisition-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .requisition-cancel {
+    background: #fff;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .requisition-cancel:hover {
+    background: #f3f4f6;
+  }
+  .requisition-send {
+    background: #1e293b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+  .requisition-send:hover {
+    background: #0f172a;
+  }
+
+  /* Modal Overlay Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+
+  .modal-content {
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-content .requisition-container {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  /* Auth (Sign In / Sign Up) Styles */
+  .auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    padding: 48px 16px;
+  }
+  .auth-card {
+    width: 420px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(15,23,42,0.06);
+    padding: 36px 36px 28px;
+    text-align: left;
+  }
+  .auth-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin: 0 auto 8px auto;
+  }
+  .auth-title {
+    text-align: center;
+    margin: 6px 0 6px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .auth-sub {
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+  .auth-form { display: flex; flex-direction: column; gap: 10px; }
+  .auth-label { font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; }
+  .auth-input {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #e6e9ef;
+  }
+  .row.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .captcha-row { margin-top: 6px; }
+  .captcha-check input { margin-right: 8px; }
+  .auth-button { padding: 12px 16px; border-radius: 6px; border: none; cursor: pointer; }
+  .auth-button.primary { background: #13263d; color: #fff; font-weight: 600; }
+  .auth-links { text-align: center; margin-top: 10px; }
+  .link-button { background: none; border: none; color: #2563eb; cursor: pointer; padding: 0; }
+  .auth-footer { text-align: center; margin-top: 10px; color: #6b7280; }
+  .auth-message { margin-top: 12px; text-align: center; color: #0b5563; }
+
+  /* Welcome card tweaks */
+  .welcome-card { text-align: center; }
+  .welcome-card .auth-title { font-size: 22px; }
+  .welcome-card .auth-sub { margin-bottom: 18px; }
+
+  /* Dashboard styles */
+  .dashboard-page { padding: 28px 40px; }
+  .dashboard-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:18px; }
+  .dashboard-header h1 { margin:0; font-size:34px; font-weight:700; letter-spacing: -0.2px; }
+  .dashboard-sub { margin:8px 0 0; color:#6b7280; font-size:15px }
+
+  /* Controls row: search grows, filters and call-to-action stay compact */
+  .dashboard-controls { display:flex; align-items:center; gap:12px; margin:18px 0; }
+  .search-wrap { flex: 1 1 auto; }
+  .search-input { padding:12px 14px; border-radius:10px; border:1px solid #e6eef6; width:100%; box-shadow: inset 0 1px 0 rgba(255,255,255,0.6); font-size:15px }
+  .status-select { padding:10px 12px; border-radius:10px; border:1px solid #e6eef6; background:#fff }
+  .cta-button { background:#0b2740; color:#fff; padding:10px 16px; border-radius:8px; font-weight:600; border:none }
+
+  .cases-card { background:#fff; border-radius:12px; padding:28px; box-shadow: 0 6px 18px rgba(15,23,42,0.04); }
+  .cases-card h3 { margin-top:0; font-size:20px; font-weight:700; }
+  .cases-table { width:100%; border-collapse:collapse; margin-top:20px }
+  .cases-table thead th { text-align:left; font-size:13px; color:#6b7280; font-weight:600; padding:18px 12px; border-bottom:1px solid #eef6fb }
+  .cases-table tbody td { padding:18px 12px; text-align:left; border-bottom:1px solid #f1f5f9; vertical-align:middle; font-size:15px; color:#334155 }
+  .cases-table tbody tr:last-child td { border-bottom: none }
+  .cases-table td.requisition-id { font-weight:700; color:#0f172a; font-family: 'Inter', 'Segoe UI', Arial, sans-serif; }
+
+  /* Status badges matching screenshot: softer background with colored text */
+  .status-badge { display:inline-block; padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600 }
+  .status-badge.in-progress { background:#eef6ff; color:#1e40af }
+  .status-badge.draft-ready { background:#f0fdf4; color:#166534 }
+  .status-badge.awaiting-client { background:#fff7ed; color:#b45309 }
+
+  /* Right-aligned small action link */
+  .case-action { color:#0b2740; font-weight:600; cursor:pointer }
+
